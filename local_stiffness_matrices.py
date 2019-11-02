@@ -99,9 +99,9 @@ k3 = k*np.array(local3)
 
 local10 = [[nae.l10 ** 2, nae.l10 * nae.m10, -(nae.l10 ** 2),
             -(nae.l10 * nae.m10)], [nae.l10 * nae.m10, nae.m10 ** 2,
-                                -(nae, l10 * nae.m10), -(nae.m10 **
+                                -(nae.l10 * nae.m10), -(nae.m10 **
                                                          2)], [
-              -(nae.l10 ** 2), -(nae, l10 * nae.m10), nae.l10 ** 2,
+              -(nae.l10 ** 2), -(nae.l10 * nae.m10), nae.l10 ** 2,
                                           nae.l10 * nae.m10], [-(
     nae.l10 * nae.m10), -(nae.m10 ** 2), nae.l10 * nae.m10, nae.m10
                                                            ** 2]]
