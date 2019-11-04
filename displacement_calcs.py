@@ -1,5 +1,6 @@
 import global_stiffness_matrix as gsm
 import numpy as np
+from numpy.linalg import inv
 
 d1x = 0
 d2x = 0
@@ -28,5 +29,11 @@ f8y = 1000
 f9y = 0
 f10y = 0
 
-F = np.array([f3y, f4y, f5y, f6y, f7y, f8y, f9y, f10y])
+F = np.array([f3y, f4y, f5y, f6y, f7y, f8y, f9y, f10y]).reshape((1,
+                                                                 8))
+M3 = inv(M2)
+D = np.array([d3y, d4y, d5y, d6y, d7y, d8y, d9y, d10y]).reshape((1,
+                                                                 8))
+
+
 a=1
