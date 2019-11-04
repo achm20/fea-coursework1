@@ -1,4 +1,3 @@
-import numpy as np
 import math
 
 Node_1 = {'x': 0, 'y': 0}

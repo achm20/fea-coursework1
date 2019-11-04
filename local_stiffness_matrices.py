@@ -14,7 +14,6 @@ local1 = [[nae.l1 ** 2, nae.l1 * nae.m1, -(nae.l1 ** 2),
                                nae.l1 * nae.m1, nae.m1 ** 2]]
 
 k1 = k*np.array(local1)
-#print(k1)
 
 local2 = [[nae.l2 ** 2, nae.l2 * nae.m2, -(nae.l2 ** 2),
            -(nae.l2 * nae.m2)], [nae.l2 * nae.m2, nae.m2 ** 2,
@@ -24,7 +23,6 @@ local2 = [[nae.l2 ** 2, nae.l2 * nae.m2, -(nae.l2 ** 2),
                        nae.l2 * nae.m2, nae.m2 ** 2]]
 
 k2 = k*np.array(local2)
-#print(k2)
 
 local3 = [[nae.l3 ** 2, nae.l3 * nae.m3, -(nae.l3 ** 2),
            -(nae.l3 * nae.m3)], [nae.l3 * nae.m3, nae.m3 ** 2,
@@ -35,7 +33,6 @@ local3 = [[nae.l3 ** 2, nae.l3 * nae.m3, -(nae.l3 ** 2),
                                                              ** 2]]
 
 k3 = k*np.array(local3)
-#print(k3)
 
 local4 = [[nae.l4 ** 2, nae.l4 * nae.m4, -(nae.l4 ** 2),
            -(nae.l4 * nae.m4)], [nae.l4 * nae.m4, nae.m4 ** 2,
