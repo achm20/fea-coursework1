@@ -29,11 +29,19 @@ f8y = 1000
 f9y = 0
 f10y = 0
 
-F = np.array([f3y, f4y, f5y, f6y, f7y, f8y, f9y, f10y]).reshape((1,
-                                                                 8))
+F = np.array([f3y, f4y, f5y, f6y, f7y, f8y, f9y, f10y]).reshape((8,
+                                                                 1))
 M3 = inv(M2)
-D = np.array([d3y, d4y, d5y, d6y, d7y, d8y, d9y, d10y]).reshape((1,
-                                                                 8))
+D = np.matmul(M3, F)
+print(D)
 
+#[d3y 0.00134911]
+ #[d4y 0.00134836]
+ #[d5y 0.00134536]
+ #[d6y 0.00134836]
+ #[d7y 0.00269746]
+ #[d8y 0.00269671]
+ #[d9y 0.00269671]
+ #[d10y 0.00269671]
 
 a=1
