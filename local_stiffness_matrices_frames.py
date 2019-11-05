@@ -1,5 +1,4 @@
 import nodes_and_elems as nae
-import numpy as np
 
 E = 200*(10**9)
 A = 1*(10**-2)
@@ -241,6 +240,7 @@ k_frame_local_13 = [[k_rod13, 0, 0, -k_rod13, 0, 0],
                      -6 * length13 * k_beam13, 4 * (length13 ** 2) *
                      k_beam13]]
 
+a=1
 
 
 
