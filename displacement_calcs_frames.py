@@ -45,5 +45,6 @@ F = np.array([f3x, f3y, m3, f4x, f4y, m4, f5x, f5y, m5, f6x, f6y,
 
 M3 = inv(M2)
 D = np.matmul(M3, F)
+print(D)
 
 a = 1
