@@ -1,4 +1,5 @@
 import global_stiffness_construct_frames as gscf
+import global_stiffness_matrices_frames as gsmf
 import numpy as np
 from numpy.linalg import inv
 
@@ -52,9 +53,14 @@ F = np.array([f3x, f3y, m3, f4x, f4y, m4, f5x, f5y, m5, f6x, f6y,
 
 M3 = inv(M2)
 D = np.matmul(M3, F)
-print(D)
+D1 = np.array(D.reshape(1, 24))
+#print(D)
 
 #Local displacement calcs
+global_disp_vector_el2 = np.array([0, 0, 0, D[0, 0], D[1, 0], D[2,
+                                                                0]])
+T_global_disp_vector_el2 = np.transpose(global_disp_vector_el2)
+local_disp_el2 = np.matmul(gsmf.Transform2, T_global_disp_vector_el2)
 
 
 a = 1
