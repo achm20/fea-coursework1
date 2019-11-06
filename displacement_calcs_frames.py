@@ -13,13 +13,19 @@ M = gscf.M
 M1 = np.delete(M, [0, 1, 2, 3, 4, 5], 0)
 M2 = np.delete(M1, [0, 1, 2, 3, 4, 5], 1)
 
-#Nodal Force Vector
-f3y = 1000
-f4y = 1000
-f5y = 2000 - 6000
-f6y = 2000
-f7y = 1000
-f8y = 1000
+def f(x):
+    Pinf = 0.59
+    Vinf = 100
+    Gammazero = 95.71
+    b = 6
+    return Pinf*Vinf*Gammazero*(1-((2*x/b)**2))**(1/2)
+
+f3y = f(-1.5) -8010
+f4y = f(-1.5)
+f5y = f(0) - 8010
+f6y = f(0)
+f7y = f(1.5) - 8010
+f8y = f(1.5)
 f9y = 0
 f10y = 0
 f3x = 0
@@ -39,6 +45,7 @@ m8 = 0
 m9 = 0
 m10 = 0
 
+#Global displacement calcs
 F = np.array([f3x, f3y, m3, f4x, f4y, m4, f5x, f5y, m5, f6x, f6y,
               m6, f7x, f7y, m7, f8x, f8y, m8, f9x, f9y, m9, f10x,
               f10y, m10]).reshape((24, 1))
@@ -46,5 +53,8 @@ F = np.array([f3x, f3y, m3, f4x, f4y, m4, f5x, f5y, m5, f6x, f6y,
 M3 = inv(M2)
 D = np.matmul(M3, F)
 print(D)
+
+#Local displacement calcs
+
 
 a = 1
