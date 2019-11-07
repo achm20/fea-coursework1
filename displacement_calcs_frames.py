@@ -22,7 +22,7 @@ def f(x):
     b = 6
     return Pinf*Vinf*Gammazero*(1-((2*x/b)**2))**(1/2)
 
-f3y = f(-1.5) -8010
+f3y = f(-1.5) - 8010
 f4y = f(-1.5)
 f5y = f(0) - 8010
 f6y = f(0)
