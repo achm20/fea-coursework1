@@ -1,6 +1,7 @@
 import nodes_and_elems as nae
 
 E = 73.1*(10**9)
+poisson = 0.33
 A = 4*(10**-4)
 b = 0.02
 d = 0.02
