@@ -1,8 +1,8 @@
 import nodes_and_elems as nae
 import numpy as np
 
-E = 200*(10**9)
-A = 1*(10**-2)
+E = 73.1*(10**9)
+A = 4*(10**-4)
 L = 1.5
 
 k_rod1 = A*E/nae.Elem_1['length']
