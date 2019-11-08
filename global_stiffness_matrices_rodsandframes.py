@@ -98,31 +98,31 @@ T_Transform12 = np.transpose(Transform12)
 T_Transform13 = np.transpose(Transform13)
 
 #k frame local 1 * Transformation Matrix 1
-k_frame_Transform1 = np.matmul(lsmrf.k_rod1, Transform1)
+k_frame_Transform1 = np.matmul(lsmrf.k_frame_local_1, Transform1)
 #k frame local 2 * Transformation Matrix 2
 k_frame_Transform2 = np.matmul(lsmrf.k_frame_local_2, Transform2)
 #k frame local 3 * Transformation Matrix 3
 k_frame_Transform3 = np.matmul(lsmrf.k_frame_local_3, Transform3)
 #k frame local 4 * Transformation Matrix 4
-k_frame_Transform4 = np.matmul(lsmrf.k_rod4, Transform4)
+k_frame_Transform4 = np.matmul(lsmrf.k_frame_local_4, Transform4)
 #k frame local 5 * Transformation Matrix 5
 k_frame_Transform5 = np.matmul(lsmrf.k_frame_local_5, Transform5)
 #k frame local 6 * Transformation Matrix 6
 k_frame_Transform6 = np.matmul(lsmrf.k_frame_local_6, Transform6)
 #k frame local 7 * Transformation Matrix 7
-k_frame_Transform7 = np.matmul(lsmrf.k_rod7, Transform7)
+k_frame_Transform7 = np.matmul(lsmrf.k_frame_local_7, Transform7)
 #k frame local 8 * Transformation Matrix 8
 k_frame_Transform8 = np.matmul(lsmrf.k_frame_local_8, Transform8)
 #k frame local 9 * Transformation Matrix 9
 k_frame_Transform9 = np.matmul(lsmrf.k_frame_local_9, Transform9)
 #k frame local 10 * Transformation Matrix 10
-k_frame_Transform10 = np.matmul(lsmrf.k_rod10, Transform10)
+k_frame_Transform10 = np.matmul(lsmrf.k_frame_local_10, Transform10)
 #k frame local 11 * Transformation Matrix 11
 k_frame_Transform11 = np.matmul(lsmrf.k_frame_local_11, Transform11)
 #k frame local 12 * Transformation Matrix 12
 k_frame_Transform12 = np.matmul(lsmrf.k_frame_local_12, Transform12)
 #k frame local 13 * Transformation Matrix 13
-k_frame_Transform13 = np.matmul(lsmrf.k_rod13, Transform13)
+k_frame_Transform13 = np.matmul(lsmrf.k_frame_local_13, Transform13)
 
 k_frame_global_1 = np.matmul(T_Transform1, k_frame_Transform1)
 k_frame_global_2 = np.matmul(T_Transform2, k_frame_Transform2)

@@ -54,12 +54,27 @@ k_beam11 = E*I/length11**3
 k_beam12 = E*I/length12**3
 k_beam13 = E*I/length13**3
 
+k_frame_local_1 = k_rod1*np.array([[1, 0, -1, 0], [0, 0, 0, 0],
+                                   [-1, 0, 1, 0], [0, 0, 0, 0]])
+
+k_frame_local_4 = k_rod4*np.array([[1, 0, -1, 0], [0, 0, 0, 0],
+                                   [-1, 0, 1, 0], [0, 0, 0, 0]])
+
+k_frame_local_7 = k_rod7*np.array([[1, 0, -1, 0], [0, 0, 0, 0],
+                                   [-1, 0, 1, 0], [0, 0, 0, 0]])
+
+k_frame_local_10 = k_rod10*np.array([[1, 0, -1, 0], [0, 0, 0, 0],
+                                   [-1, 0, 1, 0], [0, 0, 0, 0]])
+
+k_frame_local_13 = k_rod13*np.array([[1, 0, -1, 0], [0, 0, 0, 0],
+                                   [-1, 0, 1, 0], [0, 0, 0, 0]])
+
 #if s = 1, then local stiffness matrices for bernoulli beam frame
 # is used
 #if s = 2, then local stiffness matrices for timoshenko beam frame
 # is used
 
-s = 2
+s = 1
 
 if s == 1:
     k_frame_local_2 = [[k_rod2, 0, 0, -k_rod2, 0, 0],
