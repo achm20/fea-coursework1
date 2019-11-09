@@ -316,6 +316,7 @@ L = 1.5
 Beta = 2*(2*math.pi/360)
 cb = math.cos(Beta)
 
+#Element_1_x data
 Elem_1_1 = {'n1': Node_1, 'n2': Node_el1_1}
 Elem_1_2 = {'n1': Node_el1_1, 'n2': Node_el1_2}
 Elem_1_3 = {'n1': Node_el1_2, 'n2': Node_el1_3}
@@ -325,7 +326,129 @@ Length_Elem_1_el = {}
 for count in range(3, 6):
     Length_Elem_1_el["nodes_per_el_%s" % count] = {(0.2*L)/(count-1)}
 
+#Element_2_x data
+Elem_2_1 = {'n1': Node_1, 'n2': Node_el2_1}
+Elem_2_2 = {'n1': Node_el2_1, 'n2': Node_el2_2}
+Elem_2_3 = {'n1': Node_el2_2, 'n2': Node_el2_3}
+Elem_2_4 = {'n1': Node_el2_3, 'n2': Node_3}
 
+Length_Elem_2_el = {}
+for count in range(3, 6):
+    Length_Elem_2_el["nodes_per_el_%s" % count] = {L/(count-1)}
+
+#Element_3_x data
+Elem_3_1 = {'n1': Node_2, 'n2': Node_el3_1}
+Elem_3_2 = {'n1': Node_el3_1, 'n2': Node_el3_2}
+Elem_3_3 = {'n1': Node_el3_2, 'n2': Node_el3_3}
+Elem_3_4 = {'n1': Node_el3_3, 'n2': Node_4}
+
+Length_Elem_3_el = {}
+for count in range(3, 6):
+    Length_Elem_3_el["nodes_per_el_%s" % count] = {(L*cb)/(count-1)}
+
+#Element_4_x data
+Elem_4_1 = {'n1': Node_3, 'n2': Node_el4_1}
+Elem_4_2 = {'n1': Node_el4_1, 'n2': Node_el4_2}
+Elem_4_3 = {'n1': Node_el4_2, 'n2': Node_el4_3}
+Elem_4_4 = {'n1': Node_el4_3, 'n2': Node_4}
+
+Length_Elem_4_el = {}
+for count in range(3, 6):
+    Length_Elem_4_el["nodes_per_el_%s" % count] = {((1/6)*L)/(
+            count-1)}
+
+#Element_5_x data
+Elem_5_1 = {'n1': Node_3, 'n2': Node_el5_1}
+Elem_5_2 = {'n1': Node_el5_1, 'n2': Node_el5_2}
+Elem_5_3 = {'n1': Node_el5_2, 'n2': Node_el5_3}
+Elem_5_4 = {'n1': Node_el5_3, 'n2': Node_5}
+
+Length_Elem_5_el = {}
+for count in range(3, 6):
+    Length_Elem_5_el["nodes_per_el_%s" % count] = {L/(count-1)}
+
+#Element_6_x data
+Elem_6_1 = {'n1': Node_4, 'n2': Node_el6_1}
+Elem_6_2 = {'n1': Node_el6_1, 'n2': Node_el6_2}
+Elem_6_3 = {'n1': Node_el6_2, 'n2': Node_el6_3}
+Elem_6_4 = {'n1': Node_el6_3, 'n2': Node_6}
+
+Length_Elem_6_el = {}
+for count in range(3, 6):
+    Length_Elem_6_el["nodes_per_el_%s" % count] = {(L*cb)/(count-1)}
+
+#Element_7_x data
+Elem_7_1 = {'n1': Node_5, 'n2': Node_el7_1}
+Elem_7_2 = {'n1': Node_el7_1, 'n2': Node_el7_2}
+Elem_7_3 = {'n1': Node_el7_2, 'n2': Node_el7_3}
+Elem_7_4 = {'n1': Node_el7_3, 'n2': Node_6}
+
+Length_Elem_7_el = {}
+for count in range(3, 6):
+    Length_Elem_7_el["nodes_per_el_%s" % count] = {((2/15)*L)/(
+            count-1)}
+
+#Element_8_x data
+Elem_8_1 = {'n1': Node_5, 'n2': Node_el8_1}
+Elem_8_2 = {'n1': Node_el8_1, 'n2': Node_el8_2}
+Elem_8_3 = {'n1': Node_el8_2, 'n2': Node_el8_3}
+Elem_8_4 = {'n1': Node_el8_3, 'n2': Node_7}
+
+Length_Elem_8_el = {}
+for count in range(3, 6):
+    Length_Elem_8_el["nodes_per_el_%s" % count] = {L/(count-1)}
+
+#Element_9_x data
+Elem_9_1 = {'n1': Node_6, 'n2': Node_el9_1}
+Elem_9_2 = {'n1': Node_el9_1, 'n2': Node_el9_2}
+Elem_9_3 = {'n1': Node_el9_2, 'n2': Node_el9_3}
+Elem_9_4 = {'n1': Node_el9_3, 'n2': Node_8}
+
+Length_Elem_9_el = {}
+for count in range(3, 6):
+    Length_Elem_9_el["nodes_per_el_%s" % count] = {(L*cb)/(count-1)}
+
+#Element_10_x data
+Elem_10_1 = {'n1': Node_7, 'n2': Node_el10_1}
+Elem_10_2 = {'n1': Node_el10_1, 'n2': Node_el10_2}
+Elem_10_3 = {'n1': Node_el10_2, 'n2': Node_el10_3}
+Elem_10_4 = {'n1': Node_el10_3, 'n2': Node_8}
+
+Length_Elem_10_el = {}
+for count in range(3, 6):
+    Length_Elem_10_el["nodes_per_el_%s" % count] = {((1/10)*L)/(
+            count-1)}
+
+#Element_11_x data
+Elem_11_1 = {'n1': Node_7, 'n2': Node_el11_1}
+Elem_11_2 = {'n1': Node_el11_1, 'n2': Node_el11_2}
+Elem_11_3 = {'n1': Node_el11_2, 'n2': Node_el11_3}
+Elem_11_4 = {'n1': Node_el11_3, 'n2': Node_9}
+
+Length_Elem_11_el = {}
+for count in range(3, 6):
+    Length_Elem_11_el["nodes_per_el_%s" % count] = {L/(count-1)}
+
+#Element_12_x data
+Elem_12_1 = {'n1': Node_8, 'n2': Node_el12_1}
+Elem_12_2 = {'n1': Node_el12_1, 'n2': Node_el12_2}
+Elem_12_3 = {'n1': Node_el12_2, 'n2': Node_el12_3}
+Elem_12_4 = {'n1': Node_el12_3, 'n2': Node_10}
+
+Length_Elem_12_el = {}
+for count in range(3, 6):
+    Length_Elem_12_el["nodes_per_el_%s" % count] = {(L*cb)/(count-1)}
+
+#Element_13_x data
+Elem_13_1 = {'n1': Node_9, 'n2': Node_el13_1}
+Elem_13_2 = {'n1': Node_el13_1, 'n2': Node_el13_2}
+Elem_13_3 = {'n1': Node_el13_2, 'n2': Node_el13_3}
+Elem_13_4 = {'n1': Node_el13_3, 'n2': Node_10}
+
+Length_Elem_13_el = {}
+for count in range(3, 6):
+    Length_Elem_13_el["nodes_per_el_%s" % count] = {((1/15)*L)/(
+            count-1)}
 
 # Elem_1 = {'n1': Node_1, 'n2': Node_2, 'length': 0.2*L}
 # Elem_2 = {'n1': Node_1, 'n2': Node_3, 'length': L}
