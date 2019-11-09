@@ -12,11 +12,16 @@ Node_8 = {'x': 4.5, 'y': 0.15}
 Node_9 = {'x': 6, 'y': 0}
 Node_10 = {'x': 6, 'y': 0.1}
 
-Node_el1 = {}
-for count in range(3, 5):
-    Node_el1["nodes_per_el_%s" % count] = {'x': (Node_2['x'] -
-    Node_1['x'])/count-1, 'y': (Node_2['y'] - Node_1['y'])/count-1}
-    #for key, value in sorted(Node_el1.items()):
+Node_el1_1 = {}
+for count in range(3, 10):
+    Node_el1_1["nodes_per_el_%s" % count] = {'x': (Node_2['x'] -
+    Node_1['x'])/(count-1), 'y': (Node_2['y'] - Node_1['y'])/(
+            count-1)}
+Node_el1_2 = {}
+for count in range(4, 10):
+    Node_el1_2["nodes_per_el_%s" % count] = {'x': (Node_2['x'] -
+    Node_1['x'])/(2/count-1), 'y': (Node_2['y'] - Node_1[
+        'y'])/(2/count-1)}
 
 L = 1.5
 Beta = 2*(2*math.pi/360)
