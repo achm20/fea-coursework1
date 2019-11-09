@@ -32,7 +32,7 @@ for count in range(5, 6):
     Node_1['x'])*(3/(count-1)), 'y': (Node_2['y'] - Node_1[
         'y'])*(3/(count-1))}
 else:
-    Node_el1_2["nodes_per_el_4"] = Node_2
+    Node_el1_3["nodes_per_el_4"] = Node_2
 
 #Element 2 internal nodes
 Node_el2_1 = {}
@@ -46,12 +46,16 @@ for count in range(4, 6):
     Node_el2_2["nodes_per_el_%s" % count] = {'x': (Node_3['x'] -
     Node_1['x'])*(2/(count-1)), 'y': (Node_3['y'] - Node_1[
         'y'])*(2/(count-1))}
+else:
+    Node_el2_2["nodes_per_el_3"] = Node_3
 
 Node_el2_3 = {}
 for count in range(5, 6):
     Node_el2_3["nodes_per_el_%s" % count] = {'x': (Node_3['x'] -
     Node_1['x'])*(3/(count-1)), 'y': (Node_3['y'] - Node_1[
         'y'])*(3/(count-1))}
+else:
+    Node_el2_3["nodes_per_el_4"] = Node_2
 
 #Element 3 internal nodes
 Node_el3_1 = {}
@@ -65,12 +69,16 @@ for count in range(4, 6):
     Node_el3_2["nodes_per_el_%s" % count] = {'x': (Node_4['x'] -
     Node_2['x'])*(2/(count-1)), 'y': (Node_4['y'] - Node_2[
         'y'])*(2/(count-1))}
+else:
+    Node_el3_2["nodes_per_el_3"] = Node_4
 
 Node_el3_3 = {}
 for count in range(5, 6):
     Node_el3_3["nodes_per_el_%s" % count] = {'x': (Node_4['x'] -
     Node_2['x'])*(3/(count-1)), 'y': (Node_4['y'] - Node_2[
         'y'])*(3/(count-1))}
+else:
+    Node_el3_3["nodes_per_el_4"] = Node_4
 
 #Element 4 internal nodes
 Node_el4_1 = {}
@@ -84,12 +92,16 @@ for count in range(4, 6):
     Node_el4_2["nodes_per_el_%s" % count] = {'x': (Node_4['x'] -
     Node_3['x'])*(2/(count-1)), 'y': (Node_4['y'] - Node_3[
         'y'])*(2/(count-1))}
+else:
+    Node_el4_2["nodes_per_el_3"] = Node_4
 
 Node_el4_3 = {}
 for count in range(5, 6):
     Node_el4_3["nodes_per_el_%s" % count] = {'x': (Node_4['x'] -
     Node_3['x'])*(3/(count-1)), 'y': (Node_4['y'] - Node_3[
         'y'])*(3/(count-1))}
+else:
+    Node_el4_3["nodes_per_el_4"] = Node_4
 
 #Element 5 internal nodes
 Node_el5_1 = {}
@@ -103,12 +115,16 @@ for count in range(4, 6):
     Node_el5_2["nodes_per_el_%s" % count] = {'x': (Node_5['x'] -
     Node_3['x'])*(2/(count-1)), 'y': (Node_5['y'] - Node_3[
         'y'])*(2/(count-1))}
+else:
+    Node_el5_2["nodes_per_el_3"] = Node_5
 
 Node_el5_3 = {}
 for count in range(5, 6):
     Node_el5_3["nodes_per_el_%s" % count] = {'x': (Node_5['x'] -
     Node_3['x'])*(3/(count-1)), 'y': (Node_5['y'] - Node_3[
         'y'])*(3/(count-1))}
+else:
+    Node_el5_3["nodes_per_el_4"] = Node_5
 
 #Element 6 internal nodes
 Node_el6_1 = {}
@@ -122,12 +138,16 @@ for count in range(4, 6):
     Node_el6_2["nodes_per_el_%s" % count] = {'x': (Node_6['x'] -
     Node_4['x'])*(2/(count-1)), 'y': (Node_6['y'] - Node_4[
         'y'])*(2/(count-1))}
+else:
+    Node_el6_2["nodes_per_el_3"] = Node_6
 
 Node_el6_3 = {}
 for count in range(5, 6):
     Node_el6_3["nodes_per_el_%s" % count] = {'x': (Node_6['x'] -
     Node_4['x'])*(3/(count-1)), 'y': (Node_6['y'] - Node_4[
         'y'])*(3/(count-1))}
+else:
+    Node_el6_3["nodes_per_el_4"] = Node_6
 
 #Element 7 internal nodes
 Node_el7_1 = {}
@@ -141,12 +161,16 @@ for count in range(4, 6):
     Node_el7_2["nodes_per_el_%s" % count] = {'x': (Node_6['x'] -
     Node_5['x'])*(2/(count-1)), 'y': (Node_6['y'] - Node_5[
         'y'])*(2/(count-1))}
+else:
+    Node_el7_2["nodes_per_el_3"] = Node_6
 
 Node_el7_3 = {}
 for count in range(5, 6):
     Node_el7_3["nodes_per_el_%s" % count] = {'x': (Node_6['x'] -
     Node_5['x'])*(3/(count-1)), 'y': (Node_6['y'] - Node_5[
         'y'])*(3/(count-1))}
+else:
+    Node_el7_3["nodes_per_el_4"] = Node_6
 
 #Element 8 internal nodes
 Node_el8_1 = {}
@@ -160,12 +184,16 @@ for count in range(4, 6):
     Node_el8_2["nodes_per_el_%s" % count] = {'x': (Node_7['x'] -
     Node_5['x'])*(2/(count-1)), 'y': (Node_7['y'] - Node_5[
         'y'])*(2/(count-1))}
+else:
+    Node_el8_2["nodes_per_el_3"] = Node_7
 
 Node_el8_3 = {}
 for count in range(5, 6):
     Node_el8_3["nodes_per_el_%s" % count] = {'x': (Node_7['x'] -
     Node_5['x'])*(3/(count-1)), 'y': (Node_7['y'] - Node_5[
         'y'])*(3/(count-1))}
+else:
+    Node_el8_3["nodes_per_el_4"] = Node_7
 
 #Element 9 internal nodes
 Node_el9_1 = {}
@@ -179,12 +207,16 @@ for count in range(4, 6):
     Node_el9_2["nodes_per_el_%s" % count] = {'x': (Node_8['x'] -
     Node_6['x'])*(2/(count-1)), 'y': (Node_8['y'] - Node_6[
         'y'])*(2/(count-1))}
+else:
+    Node_el9_2["nodes_per_el_3"] = Node_8
 
 Node_el9_3 = {}
 for count in range(5, 6):
     Node_el9_3["nodes_per_el_%s" % count] = {'x': (Node_8['x'] -
     Node_6['x'])*(3/(count-1)), 'y': (Node_8['y'] - Node_6[
         'y'])*(3/(count-1))}
+else:
+    Node_el9_3["nodes_per_el_4"] = Node_8
 
 #Element 10 internal nodes
 Node_el10_1 = {}
@@ -198,12 +230,16 @@ for count in range(4, 6):
     Node_el10_2["nodes_per_el_%s" % count] = {'x': (Node_8['x'] -
     Node_7['x'])*(2/(count-1)), 'y': (Node_8['y'] - Node_7[
         'y'])*(2/(count-1))}
+else:
+    Node_el10_2["nodes_per_el_3"] = Node_8
 
 Node_el10_3 = {}
 for count in range(5, 6):
     Node_el10_3["nodes_per_el_%s" % count] = {'x': (Node_8['x'] -
     Node_7['x'])*(3/(count-1)), 'y': (Node_8['y'] - Node_7[
         'y'])*(3/(count-1))}
+else:
+    Node_el10_3["nodes_per_el_4"] = Node_8
 
 #Element 11 internal nodes
 Node_el11_1 = {}
@@ -217,12 +253,16 @@ for count in range(4, 6):
     Node_el11_2["nodes_per_el_%s" % count] = {'x': (Node_9['x'] -
     Node_7['x'])*(2/(count-1)), 'y': (Node_9['y'] - Node_7[
         'y'])*(2/(count-1))}
+else:
+    Node_el11_2["nodes_per_el_3"] = Node_9
 
 Node_el11_3 = {}
 for count in range(5, 6):
     Node_el11_3["nodes_per_el_%s" % count] = {'x': (Node_9['x'] -
     Node_7['x'])*(3/(count-1)), 'y': (Node_9['y'] - Node_7[
         'y'])*(3/(count-1))}
+else:
+    Node_el11_3["nodes_per_el_4"] = Node_9
 
 #Element 12 internal nodes
 Node_el12_1 = {}
@@ -236,12 +276,16 @@ for count in range(4, 6):
     Node_el12_2["nodes_per_el_%s" % count] = {'x': (Node_10['x'] -
     Node_8['x'])*(2/(count-1)), 'y': (Node_10['y'] - Node_8[
         'y'])*(2/(count-1))}
+else:
+    Node_el12_2["nodes_per_el_3"] = Node_10
 
 Node_el12_3 = {}
 for count in range(5, 6):
     Node_el12_3["nodes_per_el_%s" % count] = {'x': (Node_10['x'] -
     Node_8['x'])*(3/(count-1)), 'y': (Node_10['y'] - Node_8[
         'y'])*(3/(count-1))}
+else:
+    Node_el12_3["nodes_per_el_4"] = Node_10
 
 #Element 13 internal nodes
 Node_el13_1 = {}
@@ -255,12 +299,16 @@ for count in range(4, 6):
     Node_el13_2["nodes_per_el_%s" % count] = {'x': (Node_10['x'] -
     Node_9['x'])*(2/(count-1)), 'y': (Node_10['y'] - Node_9[
         'y'])*(2/(count-1))}
+else:
+    Node_el1_13["nodes_per_el_3"] = Node_10
 
 Node_el13_3 = {}
 for count in range(5, 6):
     Node_el13_3["nodes_per_el_%s" % count] = {'x': (Node_10['x'] -
     Node_9['x'])*(3/(count-1)), 'y': (Node_10['y'] - Node_9[
         'y'])*(3/(count-1))}
+else:
+    Node_el13_3["nodes_per_el_4"] = Node_10
 
 #--------------------------------------------------------------------
 
@@ -275,7 +323,7 @@ Elem_1_4 = {'n1': Node_el1_3, 'n2': Node_2}
 
 Length_Elem_1_el = {}
 for count in range(3, 6):
-    Length_Elem_1_el["nodes_per_el_%s" % count] = {(0.2*L)/count}
+    Length_Elem_1_el["nodes_per_el_%s" % count] = {(0.2*L)/(count-1)}
 
 
 
