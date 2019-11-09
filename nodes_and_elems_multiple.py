@@ -1,4 +1,5 @@
 import math
+import nodes_and_elems as nae
 
 Node_1 = {'x': 0, 'y': 0}
 Node_2 = {'x': 0, 'y': 0.3}
@@ -300,7 +301,7 @@ for count in range(4, 6):
     Node_9['x'])*(2/(count-1)), 'y': (Node_10['y'] - Node_9[
         'y'])*(2/(count-1))}
 else:
-    Node_el1_13["nodes_per_el_3"] = Node_10
+    Node_el13_1["nodes_per_el_3"] = Node_10
 
 Node_el13_3 = {}
 for count in range(5, 6):
@@ -324,7 +325,8 @@ Elem_1_4 = {'n1': Node_el1_3, 'n2': Node_2}
 
 Length_Elem_1_el = {}
 for count in range(3, 6):
-    Length_Elem_1_el["nodes_per_el_%s" % count] = {(0.2*L)/(count-1)}
+    Length_Elem_1_el["nodes_per_el_%s" % count] = {'length': (0.2*L)/(
+            count-1)}
 
 #Element_2_x data
 Elem_2_1 = {'n1': Node_1, 'n2': Node_el2_1}
@@ -334,7 +336,7 @@ Elem_2_4 = {'n1': Node_el2_3, 'n2': Node_3}
 
 Length_Elem_2_el = {}
 for count in range(3, 6):
-    Length_Elem_2_el["nodes_per_el_%s" % count] = {L/(count-1)}
+    Length_Elem_2_el["nodes_per_el_%s" % count] = {'length': L/(count-1)}
 
 #Element_3_x data
 Elem_3_1 = {'n1': Node_2, 'n2': Node_el3_1}
@@ -344,7 +346,7 @@ Elem_3_4 = {'n1': Node_el3_3, 'n2': Node_4}
 
 Length_Elem_3_el = {}
 for count in range(3, 6):
-    Length_Elem_3_el["nodes_per_el_%s" % count] = {(L*cb)/(count-1)}
+    Length_Elem_3_el["nodes_per_el_%s" % count] = {'length': (L*cb)/(count-1)}
 
 #Element_4_x data
 Elem_4_1 = {'n1': Node_3, 'n2': Node_el4_1}
@@ -354,7 +356,7 @@ Elem_4_4 = {'n1': Node_el4_3, 'n2': Node_4}
 
 Length_Elem_4_el = {}
 for count in range(3, 6):
-    Length_Elem_4_el["nodes_per_el_%s" % count] = {((1/6)*L)/(
+    Length_Elem_4_el["nodes_per_el_%s" % count] = {'length': ((1/6)*L)/(
             count-1)}
 
 #Element_5_x data
@@ -365,7 +367,7 @@ Elem_5_4 = {'n1': Node_el5_3, 'n2': Node_5}
 
 Length_Elem_5_el = {}
 for count in range(3, 6):
-    Length_Elem_5_el["nodes_per_el_%s" % count] = {L/(count-1)}
+    Length_Elem_5_el["nodes_per_el_%s" % count] = {'length': L/(count-1)}
 
 #Element_6_x data
 Elem_6_1 = {'n1': Node_4, 'n2': Node_el6_1}
@@ -375,7 +377,7 @@ Elem_6_4 = {'n1': Node_el6_3, 'n2': Node_6}
 
 Length_Elem_6_el = {}
 for count in range(3, 6):
-    Length_Elem_6_el["nodes_per_el_%s" % count] = {(L*cb)/(count-1)}
+    Length_Elem_6_el["nodes_per_el_%s" % count] = {'length': (L*cb)/(count-1)}
 
 #Element_7_x data
 Elem_7_1 = {'n1': Node_5, 'n2': Node_el7_1}
@@ -385,7 +387,7 @@ Elem_7_4 = {'n1': Node_el7_3, 'n2': Node_6}
 
 Length_Elem_7_el = {}
 for count in range(3, 6):
-    Length_Elem_7_el["nodes_per_el_%s" % count] = {((2/15)*L)/(
+    Length_Elem_7_el["nodes_per_el_%s" % count] = {'length': ((2/15)*L)/(
             count-1)}
 
 #Element_8_x data
@@ -396,7 +398,7 @@ Elem_8_4 = {'n1': Node_el8_3, 'n2': Node_7}
 
 Length_Elem_8_el = {}
 for count in range(3, 6):
-    Length_Elem_8_el["nodes_per_el_%s" % count] = {L/(count-1)}
+    Length_Elem_8_el["nodes_per_el_%s" % count] = {'length': L/(count-1)}
 
 #Element_9_x data
 Elem_9_1 = {'n1': Node_6, 'n2': Node_el9_1}
@@ -406,7 +408,7 @@ Elem_9_4 = {'n1': Node_el9_3, 'n2': Node_8}
 
 Length_Elem_9_el = {}
 for count in range(3, 6):
-    Length_Elem_9_el["nodes_per_el_%s" % count] = {(L*cb)/(count-1)}
+    Length_Elem_9_el["nodes_per_el_%s" % count] = {'length': (L*cb)/(count-1)}
 
 #Element_10_x data
 Elem_10_1 = {'n1': Node_7, 'n2': Node_el10_1}
@@ -416,7 +418,7 @@ Elem_10_4 = {'n1': Node_el10_3, 'n2': Node_8}
 
 Length_Elem_10_el = {}
 for count in range(3, 6):
-    Length_Elem_10_el["nodes_per_el_%s" % count] = {((1/10)*L)/(
+    Length_Elem_10_el["nodes_per_el_%s" % count] = {'length': ((1/10)*L)/(
             count-1)}
 
 #Element_11_x data
@@ -427,7 +429,7 @@ Elem_11_4 = {'n1': Node_el11_3, 'n2': Node_9}
 
 Length_Elem_11_el = {}
 for count in range(3, 6):
-    Length_Elem_11_el["nodes_per_el_%s" % count] = {L/(count-1)}
+    Length_Elem_11_el["nodes_per_el_%s" % count] = {'length': L/(count-1)}
 
 #Element_12_x data
 Elem_12_1 = {'n1': Node_8, 'n2': Node_el12_1}
@@ -437,7 +439,7 @@ Elem_12_4 = {'n1': Node_el12_3, 'n2': Node_10}
 
 Length_Elem_12_el = {}
 for count in range(3, 6):
-    Length_Elem_12_el["nodes_per_el_%s" % count] = {(L*cb)/(count-1)}
+    Length_Elem_12_el["nodes_per_el_%s" % count] = {'length': (L*cb)/(count-1)}
 
 #Element_13_x data
 Elem_13_1 = {'n1': Node_9, 'n2': Node_el13_1}
@@ -447,7 +449,7 @@ Elem_13_4 = {'n1': Node_el13_3, 'n2': Node_10}
 
 Length_Elem_13_el = {}
 for count in range(3, 6):
-    Length_Elem_13_el["nodes_per_el_%s" % count] = {((1/15)*L)/(
+    Length_Elem_13_el["nodes_per_el_%s" % count] = {'length': ((1/15)*L)/(
             count-1)}
 
 # Elem_1 = {'n1': Node_1, 'n2': Node_2, 'length': 0.2*L}
@@ -463,32 +465,51 @@ for count in range(3, 6):
 # Elem_11 = {'n1': Node_7, 'n2': Node_9, 'length': L}
 # Elem_12 = {'n1': Node_8, 'n2': Node_10, 'length': L*cb}
 # Elem_13 = {'n1': Node_9, 'n2': Node_10, 'length': (1/15)*L}
+#
+# npe = 3 #nodes per element
+# if npe == 3:
+#     l1_1 = (Elem_1_1['n2']['nodes_per_el_3']['x'] - Elem_1_1['n1']['x'])\
+#            / Length_Elem_1_el['nodes_per_el_3']['length']
+#     l1_2 = (Elem_1_2['n2']['nodes_per_el_3']['x'] - Elem_1_2['n1'][
+#         'nodes_per_el_3']['x']) / Length_Elem_1_el[
+#         'nodes_per_el_3']['length']
+#
+# elif npe == 4:
+#     l1_1 = (Elem_1_1['n2']['nodes_per_el_4']['x'] - Elem_1_1['n1'][
+#         'x']) \
+#            / Length_Elem_1_el['nodes_per_el_4']['length']
+#     l1_2 = (Elem_1_2['n2']['nodes_per_el_4']['x'] - Elem_1_2['n1'][
+#         'nodes_per_el_4']['x']) / Length_Elem_1_el[
+#                'nodes_per_el_4']['length']
+#     l1_3 = (Elem_1_2['n2']['nodes_per_el_4']['x'] - Elem_1_2['n1'][
+#         'nodes_per_el_4']['x']) / Length_Elem_1_el[
+#                'nodes_per_el_4']['length']
 
-l1 = (Elem_1['n2']['x'] - Elem_1['n1']['x'])/(Elem_1['length'])
-l2 = (Elem_2['n2']['x'] - Elem_2['n1']['x'])/(Elem_2['length'])
-l3 = (Elem_3['n2']['x'] - Elem_3['n1']['x'])/(Elem_3['length'])
-l4 = (Elem_4['n2']['x'] - Elem_4['n1']['x'])/(Elem_4['length'])
-l5 = (Elem_5['n2']['x'] - Elem_5['n1']['x'])/(Elem_5['length'])
-l6 = (Elem_6['n2']['x'] - Elem_6['n1']['x'])/(Elem_6['length'])
-l7 = (Elem_7['n2']['x'] - Elem_7['n1']['x'])/(Elem_7['length'])
-l8 = (Elem_8['n2']['x'] - Elem_8['n1']['x'])/(Elem_8['length'])
-l9 = (Elem_9['n2']['x'] - Elem_9['n1']['x'])/(Elem_9['length'])
-l10 = (Elem_10['n2']['x'] - Elem_10['n1']['x'])/(Elem_10['length'])
-l11 = (Elem_11['n2']['x'] - Elem_11['n1']['x'])/(Elem_11['length'])
-l12 = (Elem_12['n2']['x'] - Elem_12['n1']['x'])/(Elem_12['length'])
-l13 = (Elem_13['n2']['x'] - Elem_13['n1']['x'])/(Elem_13['length'])
+l1 = (nae.Elem_1['n2']['x'] - nae.Elem_1['n1']['x'])/(nae.Elem_1['length'])
+l2 = (nae.Elem_2['n2']['x'] - nae.Elem_2['n1']['x'])/(nae.Elem_2['length'])
+l3 = (nae.Elem_3['n2']['x'] - nae.Elem_3['n1']['x'])/(nae.Elem_3['length'])
+l4 = (nae.Elem_4['n2']['x'] - nae.Elem_4['n1']['x'])/(nae.Elem_4['length'])
+l5 = (nae.Elem_5['n2']['x'] - nae.Elem_5['n1']['x'])/(nae.Elem_5['length'])
+l6 = (nae.Elem_6['n2']['x'] - nae.Elem_6['n1']['x'])/(nae.Elem_6['length'])
+l7 = (nae.Elem_7['n2']['x'] - nae.Elem_7['n1']['x'])/(nae.Elem_7['length'])
+l8 = (nae.Elem_8['n2']['x'] - nae.Elem_8['n1']['x'])/(nae.Elem_8['length'])
+l9 = (nae.Elem_9['n2']['x'] - nae.Elem_9['n1']['x'])/(nae.Elem_9['length'])
+l10 = (nae.Elem_10['n2']['x'] - nae.Elem_10['n1']['x'])/(nae.Elem_10['length'])
+l11 = (nae.Elem_11['n2']['x'] - nae.Elem_11['n1']['x'])/(nae.Elem_11['length'])
+l12 = (nae.Elem_12['n2']['x'] - nae.Elem_12['n1']['x'])/(nae.Elem_12['length'])
+l13 = (nae.Elem_13['n2']['x'] - nae.Elem_13['n1']['x'])/(nae.Elem_13['length'])
 
-m1 = (Elem_1['n2']['y'] - Elem_1['n1']['y']) / (Elem_1['length'])
-m2 = (Elem_2['n2']['y'] - Elem_2['n1']['y']) / (Elem_2['length'])
-m3 = (Elem_3['n2']['y'] - Elem_3['n1']['y']) / (Elem_3['length'])
-m4 = (Elem_4['n2']['y'] - Elem_4['n1']['y']) / (Elem_4['length'])
-m5 = (Elem_5['n2']['y'] - Elem_5['n1']['y']) / (Elem_5['length'])
-m6 = (Elem_6['n2']['y'] - Elem_6['n1']['y']) / (Elem_6['length'])
-m7 = (Elem_7['n2']['y'] - Elem_7['n1']['y']) / (Elem_7['length'])
-m8 = (Elem_8['n2']['y'] - Elem_8['n1']['y']) / (Elem_8['length'])
-m9 = (Elem_9['n2']['y'] - Elem_9['n1']['y']) / (Elem_9['length'])
-m10 = (Elem_10['n2']['y'] - Elem_10['n1']['y']) / (Elem_10['length'])
-m11 = (Elem_11['n2']['y'] - Elem_11['n1']['y']) / (Elem_11['length'])
-m12 = (Elem_12['n2']['y'] - Elem_12['n1']['y']) / (Elem_12['length'])
-m13 = (Elem_13['n2']['y'] - Elem_13['n1']['y']) / (Elem_13['length'])
+m1 = (nae.Elem_1['n2']['y'] - nae.Elem_1['n1']['y']) / (nae.Elem_1['length'])
+m2 = (nae.Elem_2['n2']['y'] - nae.Elem_2['n1']['y']) / (nae.Elem_2['length'])
+m3 = (nae.Elem_3['n2']['y'] - nae.Elem_3['n1']['y']) / (nae.Elem_3['length'])
+m4 = (nae.Elem_4['n2']['y'] - nae.Elem_4['n1']['y']) / (nae.Elem_4['length'])
+m5 = (nae.Elem_5['n2']['y'] - nae.Elem_5['n1']['y']) / (nae.Elem_5['length'])
+m6 = (nae.Elem_6['n2']['y'] - nae.Elem_6['n1']['y']) / (nae.Elem_6['length'])
+m7 = (nae.Elem_7['n2']['y'] - nae.Elem_7['n1']['y']) / (nae.Elem_7['length'])
+m8 = (nae.Elem_8['n2']['y'] - nae.Elem_8['n1']['y']) / (nae.Elem_8['length'])
+m9 = (nae.Elem_9['n2']['y'] - nae.Elem_9['n1']['y']) / (nae.Elem_9['length'])
+m10 = (nae.Elem_10['n2']['y'] - nae.Elem_10['n1']['y']) / (nae.Elem_10['length'])
+m11 = (nae.Elem_11['n2']['y'] - nae.Elem_11['n1']['y']) / (nae.Elem_11['length'])
+m12 = (nae.Elem_12['n2']['y'] - nae.Elem_12['n1']['y']) / (nae.Elem_12['length'])
+m13 = (nae.Elem_13['n2']['y'] - nae.Elem_13['n1']['y']) / (nae.Elem_13['length'])
 
