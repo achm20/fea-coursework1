@@ -69,7 +69,7 @@ if npe == 3:
     M[54:60, 54:60] += gsmf.k_frame_global_12
     M[np.ix_([57, 58, 59, 66, 67, 68], [57, 58, 59, 66, 67, 68])] += \
         gsmf.k_frame_global_12
-    M[60:65, 60:65] += gsmf.k_frame_global_13
+    M[60:66, 60:66] += gsmf.k_frame_global_13
     M[63:69, 63:69] += gsmf.k_frame_global_13
 
 a = 1

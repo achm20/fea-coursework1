@@ -1,6 +1,6 @@
 import nodes_and_elems_multiple as naem
 import numpy as np
-npe = 5
+npe = 3
 
 E = 73.1*(10**9)
 poisson = 0.33
@@ -94,7 +94,7 @@ k_beam13 = E*I/length13**3
 #if s = 2, then local stiffness matrices for timoshenko beam frame
 # is used
 
-s = 2
+s = 1
 if s == 1:
     k_frame_local_1 = [[k_rod1, 0, 0, -k_rod1, 0, 0],
                         [0, 12*k_beam1, 6*length1*k_beam1, 0, -12*k_beam1,

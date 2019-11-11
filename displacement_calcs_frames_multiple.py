@@ -1,13 +1,13 @@
-import global_stiffness_construct_frames as gscf
+import global_stiffness_construct_frames_multiple as gscfm
 import global_stiffness_matrices_frames as gsmf
 import local_stiffness_matrices_frames_multiple as lsmfm
 import nodes_and_elems as nae
 import numpy as np
 from numpy.linalg import inv
 
-M = gscf.M
-M1 = np.delete(M, [0, 1, 2, 3, 4, 5], 0)
-M2 = np.delete(M1, [0, 1, 2, 3, 4, 5], 1)
+M = gscfm.M
+M1 = np.delete(M, [0, 1, 2, 3, 4, 5, 9, 10, 11], 0)
+M2 = np.delete(M1, [0, 1, 2, 3, 4, 5, 9, 10, 11], 1)
 
 
 def f(x):
@@ -17,40 +17,83 @@ def f(x):
     b = 6
     return Pinf*Vinf*Gammazero*(1-((2*x/b)**2))**(1/2)
 
+
 npe = lsmfm.npe
 
 if npe == 3:
-    xinterval = 0.75
-    f1_3_1y = f(xinterval)
+    f1_3_1y = 0
+    f2_4_1y = 0
     f3y = f(-1.5) - 8010
+    f3_4_1y = 0
+    f3_5_1y = 0
     f4y = f(-1.5)
+    f4_6_1y = 0
     f5y = f(0) - 8010
+    f5_6_1y = 0
+    f5_7_1y = 0
     f6y = f(0)
+    f6_8_1y = 0
     f7y = f(1.5) - 8010
+    f7_8_1y = 0
+    f7_9_1y = 0
     f8y = f(1.5)
+    f8_10_1y = 0
     f9y = 0
+    f9_10_1y = 0
     f10y = 0
+
+    f1_3_1x = 0
+    f2_4_1x = 0
     f3x = 0
+    f3_4_1x = 0
+    f3_5_1x = 0
     f4x = 0
+    f4_6_1x = 0
     f5x = 0
+    f5_6_1x = 0
+    f5_7_1x = 0
     f6x = 0
+    f6_8_1x = 0
     f7x = 0
+    f7_8_1x = 0
+    f7_9_1x = 0
     f8x = 0
+    f8_10_1x = 0
     f9x = 0
+    f9_10_1x = 0
     f10x = 0
+
+    m1_3_1 = 0
+    m2_4_1 = 0
     m3 = 0
+    m3_4_1 = 0
+    m3_5_1 = 0
     m4 = 0
+    m4_6_1 = 0
     m5 = 0
+    m5_6_1 = 0
+    m5_7_1 = 0
     m6 = 0
+    m6_8_1 = 0
     m7 = 0
+    m7_8_1 = 0
+    m7_9_1 = 0
     m8 = 0
+    m8_10_1 = 0
     m9 = 0
+    m9_10_1 = 0
     m10 = 0
 
 #Global displacement calcs
-F = np.array([f3x, f3y, m3, f4x, f4y, m4, f5x, f5y, m5, f6x, f6y,
-              m6, f7x, f7y, m7, f8x, f8y, m8, f9x, f9y, m9, f10x,
-              f10y, m10]).reshape((24, 1))
+F = np.array([f1_3_1x, f1_3_1y, m1_3_1, f2_4_1x, f2_4_1y, m2_4_1,
+              f3x, f3y, m3, f3_4_1x, f3_4_1y, m3_4_1, f3_5_1x, f3_5_1y,
+              m3_5_1,  f4x, f4y, m4, f4_6_1x, f4_6_1y, m4_6_1, f5x,
+              f5y, m5, f5_6_1x, f5_6_1y, m5_6_1, f5_7_1x, f5_7_1y,
+              m5_7_1, f6x, f6y, m6, f6_8_1x, f6_8_1y, m6_8_1, f7x,
+              f7y, m7, f7_8_1x, f7_8_1y, m7_8_1, f7_9_1x, f7_9_1y,
+              m7_9_1, f8x, f8y, m8, f8_10_1x, f8_10_1y, m8_10_1,
+              f9x, f9y, m9, f9_10_1x, f9_10_1y, m9_10_1, f10x,
+              f10y, m10]).reshape((60, 1))
 
 M3 = inv(M2)
 D = np.matmul(M3, F)
