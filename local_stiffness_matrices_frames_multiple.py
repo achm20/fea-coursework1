@@ -94,7 +94,7 @@ k_beam13 = E*I/length13**3
 #if s = 2, then local stiffness matrices for timoshenko beam frame
 # is used
 
-s = 1
+s = 2
 if s == 1:
     k_frame_local_1 = [[k_rod1, 0, 0, -k_rod1, 0, 0],
                         [0, 12*k_beam1, 6*length1*k_beam1, 0, -12*k_beam1,

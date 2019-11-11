@@ -22,12 +22,25 @@ def f(x):
     b = 6
     return Pinf*Vinf*Gammazero*(1-((2*x/b)**2))**(1/2)
 
-f3y = f(-1.5) - 8010
-f4y = f(-1.5)
-f5y = f(0) - 8010
-f6y = f(0)
-f7y = f(1.5) - 8010
-f8y = f(1.5)
+
+total_lift = 26610
+xinterval = 1.5
+
+t3 = f(xinterval)
+t4 = f(xinterval)
+t5 = f(0)
+t6 = f(0)
+t7 = f(xinterval)
+t8 = f(xinterval)
+
+f5y = total_lift / ((t3/t5) + (t4/t5) + (t6/t5) + (t7/t5) +
+                            t8/t5) + 1)
+
+f3y = (t3 / t5) * f5y
+f4y = (t4 / t5) * f5y
+f6y = (t6 / t5) * f5y
+f7y = (t7 / t5) * f5y
+f8y = (t8 / t5) * f5y
 f9y = 0
 f10y = 0
 f3x = 0

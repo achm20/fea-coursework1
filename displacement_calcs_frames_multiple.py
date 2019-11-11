@@ -19,25 +19,50 @@ def f(x):
 
 
 npe = lsmfm.npe
+total_lift = 26610
 
 if npe == 3:
-    f1_3_1y = 0
-    f2_4_1y = 0
-    f3y = f(-1.5) - 8010
-    f3_4_1y = 0
-    f3_5_1y = 0
-    f4y = f(-1.5)
-    f4_6_1y = 0
-    f5y = f(0) - 8010
-    f5_6_1y = 0
-    f5_7_1y = 0
-    f6y = f(0)
-    f6_8_1y = 0
-    f7y = f(1.5) - 8010
-    f7_8_1y = 0
-    f7_9_1y = 0
-    f8y = f(1.5)
-    f8_10_1y = 0
+    xinterval = 0.75
+    t1_3_1 = f(3*xinterval)
+    t2_4_1 = f(3*xinterval)
+    t3 = f(2*xinterval)
+    t3_4_1 = f(2*xinterval)
+    t4 = f(2*xinterval)
+    t3_5_1 = f(xinterval)
+    t4_6_1 = f(xinterval)
+    t5 = f(0)
+    t5_6_1 = f(0)
+    t6 = f(0)
+    t5_7_1 = f(xinterval)
+    t6_8_1 = f(xinterval)
+    t7 = f(2*xinterval)
+    t7_8_1 = f(2*xinterval)
+    t8 = f(2*xinterval)
+    t7_9_1 = f(3*xinterval)
+    t8_10_1 = f(3*xinterval)
+
+    f5y = total_lift/((t1_3_1/t5) + (t2_4_1/t5) + (t3/t5) + (
+            t3_4_1/t5) + (t4/t5) + (t3_5_1/t5) + (t4_6_1/t5) + (
+                         t5_6_1/t5) + (t6/t5) + (t5_7_1/t5) + (
+                         t6_8_1/t5) + (t7/t5) + (t7_8_1/t5) + (
+                         t8/t5) + (t7_9_1/t5) + (t8_10_1/t5) + 1)
+
+    f1_3_1y = (t1_3_1/t5)*f5y
+    f2_4_1y = (t2_4_1/t5)*f5y
+    f3y = (t3/t5)*f5y
+    f3_4_1y = (t3_4_1/t5)*f5y
+    f3_5_1y = (t3_5_1/t5)*f5y
+    f4y = (t4/t5)*f5y
+    f4_6_1y = (t4_6_1/t5)*f5y
+    f5_6_1y = (t5_6_1/t5)*f5y
+    f5_7_1y = (t5_7_1/t5)*f5y
+    f6y = (t6/t5)*f5y
+    f6_8_1y = (t6_8_1/t5)*f5y
+    f7y = (t7/t5)*f5y
+    f7_8_1y = (t7_8_1/t5)*f5y
+    f7_9_1y = (t7_9_1/t5)*f5y
+    f8y = (t8/t5)*f5y
+    f8_10_1y = (t8_10_1/t5)*f5y
     f9y = 0
     f9_10_1y = 0
     f10y = 0
