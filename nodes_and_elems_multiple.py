@@ -452,39 +452,6 @@ for count in range(3, 6):
     Length_Elem_13_el["nodes_per_el_%s" % count] = {'length': ((1/15)*L)/(
             count-1)}
 
-# Elem_1 = {'n1': Node_1, 'n2': Node_2, 'length': 0.2*L}
-# Elem_2 = {'n1': Node_1, 'n2': Node_3, 'length': L}
-# Elem_3 = {'n1': Node_2, 'n2': Node_4, 'length': L*cb}
-# Elem_4 = {'n1': Node_3, 'n2': Node_4, 'length': (1/6)*L}
-# Elem_5 = {'n1': Node_3, 'n2': Node_5, 'length': L}
-# Elem_6 = {'n1': Node_4, 'n2': Node_6, 'length': L*cb}
-# Elem_7 = {'n1': Node_5, 'n2': Node_6, 'length': (2/15)*L}
-# Elem_8 = {'n1': Node_5, 'n2': Node_7, 'length': L}
-# Elem_9 = {'n1': Node_6, 'n2': Node_8, 'length': L*cb}
-# Elem_10 = {'n1': Node_7, 'n2': Node_8, 'length': (1/10)*L}
-# Elem_11 = {'n1': Node_7, 'n2': Node_9, 'length': L}
-# Elem_12 = {'n1': Node_8, 'n2': Node_10, 'length': L*cb}
-# Elem_13 = {'n1': Node_9, 'n2': Node_10, 'length': (1/15)*L}
-#
-# npe = 3 #nodes per element
-# if npe == 3:
-#     l1_1 = (Elem_1_1['n2']['nodes_per_el_3']['x'] - Elem_1_1['n1']['x'])\
-#            / Length_Elem_1_el['nodes_per_el_3']['length']
-#     l1_2 = (Elem_1_2['n2']['nodes_per_el_3']['x'] - Elem_1_2['n1'][
-#         'nodes_per_el_3']['x']) / Length_Elem_1_el[
-#         'nodes_per_el_3']['length']
-#
-# elif npe == 4:
-#     l1_1 = (Elem_1_1['n2']['nodes_per_el_4']['x'] - Elem_1_1['n1'][
-#         'x']) \
-#            / Length_Elem_1_el['nodes_per_el_4']['length']
-#     l1_2 = (Elem_1_2['n2']['nodes_per_el_4']['x'] - Elem_1_2['n1'][
-#         'nodes_per_el_4']['x']) / Length_Elem_1_el[
-#                'nodes_per_el_4']['length']
-#     l1_3 = (Elem_1_2['n2']['nodes_per_el_4']['x'] - Elem_1_2['n1'][
-#         'nodes_per_el_4']['x']) / Length_Elem_1_el[
-#                'nodes_per_el_4']['length']
-
 l1 = (nae.Elem_1['n2']['x'] - nae.Elem_1['n1']['x'])/(nae.Elem_1['length'])
 l2 = (nae.Elem_2['n2']['x'] - nae.Elem_2['n1']['x'])/(nae.Elem_2['length'])
 l3 = (nae.Elem_3['n2']['x'] - nae.Elem_3['n1']['x'])/(nae.Elem_3['length'])
