@@ -1,7 +1,7 @@
 import global_stiffness_matrices_frames as gsmf
-import nodes_and_elems_multiple as naem
+import local_stiffness_matrices_frames_multiple as lsmfm
 import numpy as np
-npe = 5
+npe = lsmfm.npe
 
 if npe < 3:
     M = np.zeros((30, 30))

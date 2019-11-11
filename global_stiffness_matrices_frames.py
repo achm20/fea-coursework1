@@ -2,7 +2,7 @@ import nodes_and_elems as nae
 import numpy as np
 import local_stiffness_matrices_frames as lsmf
 import local_stiffness_matrices_frames_multiple as lsmfm
-npe = 5
+npe = lsmfm.npe
 
 Transform1 = np.array([[nae.l1, nae.m1, 0, 0, 0, 0],
               [-nae.m1, nae.l1, 0, 0, 0, 0],
