@@ -19,7 +19,7 @@ def f(x):
 
 
 npe = lsmfm.npe
-total_lift = 26610
+total_lift = 26655
 
 if npe == 3:
     xinterval = 0.75
@@ -47,21 +47,21 @@ if npe == 3:
                          t6_8_1/t5) + (t7/t5) + (t7_8_1/t5) + (
                          t8/t5) + (t7_9_1/t5) + (t8_10_1/t5) + 1)
 
-    f5y = f5yy - 6867
-    f1_3_1y = (t1_3_1/t5)*f5yy - 6867
+    f5y = f5yy - 1724
+    f1_3_1y = (t1_3_1/t5)*f5yy - 1724
     f2_4_1y = (t2_4_1/t5)*f5yy
-    f3y = (t3/t5)*f5yy - 6867
+    f3y = (t3/t5)*f5yy - 1724
     f3_4_1y = (t3_4_1/t5)*f5yy
-    f3_5_1y = (t3_5_1/t5)*f5yy - 6867
+    f3_5_1y = (t3_5_1/t5)*f5yy - 1724
     f4y = (t4/t5)*f5yy
     f4_6_1y = (t4_6_1/t5)*f5yy
     f5_6_1y = (t5_6_1/t5)*f5yy
-    f5_7_1y = (t5_7_1/t5)*f5yy - 6867
+    f5_7_1y = (t5_7_1/t5)*f5yy - 1724
     f6y = (t6/t5)*f5yy
     f6_8_1y = (t6_8_1/t5)*f5yy
-    f7y = (t7/t5)*f5yy - 6867
+    f7y = (t7/t5)*f5yy - 1724
     f7_8_1y = (t7_8_1/t5)*f5yy
-    f7_9_1y = (t7_9_1/t5)*f5yy - 6867
+    f7_9_1y = (t7_9_1/t5)*f5yy - 1724
     f8y = (t8/t5)*f5yy
     f8_10_1y = (t8_10_1/t5)*f5yy
     f9y = 0

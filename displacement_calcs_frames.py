@@ -31,15 +31,15 @@ t6 = f(0)
 t7 = f(xinterval)
 t8 = f(xinterval)
 
-total_lift = 26610
+total_lift = 26655
 
 f5yy = total_lift / ((t3/t5) + (t4/t5) + (t6/t5) + (t7/t5) +
                     (t8/t5) + 1)
-f5y = f5yy - 16023
-f3y = ((t3 / t5) * f5yy) - 16023
+f5y = f5yy - 4023
+f3y = ((t3 / t5) * f5yy) - 4023
 f4y = (t4 / t5) * f5yy
 f6y = (t6 / t5) * f5yy
-f7y = ((t7 / t5) * f5yy) - 16023
+f7y = ((t7 / t5) * f5yy) - 4023
 f8y = (t8 / t5) * f5yy
 f9y = 0
 f10y = 0
@@ -67,7 +67,7 @@ F = np.array([f3x, f3y, m3, f4x, f4y, m4, f5x, f5y, m5, f6x, f6y,
 
 M3 = inv(M2)
 D = np.matmul(M3, F)
-print(D)
+#print(D)
 
 #--------------------------------------------------------------------
 #Local displacement calcs
@@ -185,6 +185,13 @@ T_global_disp_vector_el13 = np.array(
 local_disp_el13 = np.matmul(gsmf.Transform13,
                             T_global_disp_vector_el13)
 
+Local_disps = np.array([local_disp_el2, local_disp_el3,
+                        local_disp_el4, local_disp_el5,
+                        local_disp_el6, local_disp_el7,
+                        local_disp_el8, local_disp_el9,
+                        local_disp_el10, local_disp_el11,
+                        local_disp_el12, local_disp_el13])
+#print(Local_disps)
 #--------------------------------------------------------------------
 #Element Strain calcs
 
@@ -246,5 +253,10 @@ e_el12 = (local_disp_el12[3, 0] - local_disp_el12[0, 0])/nae.Elem_12[
 #Element 13 strain
 e_el13 = (local_disp_el13[3, 0] - local_disp_el13[0, 0])/nae.Elem_13[
     'length']
+
+Local_strains = np.array([e_el2, e_el3, e_el4, e_el5, e_el6, e_el7,
+                          e_el8, e_el9, e_el10, e_el11, e_el2,
+                          e_el13]).reshape(12, 1)
+#print(Local_strains)
 
 a = 1

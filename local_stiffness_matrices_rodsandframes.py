@@ -74,7 +74,7 @@ k_frame_local_13 = k_rod13*np.array([[1, 0, -1, 0], [0, 0, 0, 0],
 #if s = 2, then local stiffness matrices for timoshenko beam frame
 # is used
 
-s = 1
+s = 2
 
 if s == 1:
     k_frame_local_2 = [[k_rod2, 0, 0, -k_rod2, 0, 0],

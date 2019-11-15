@@ -22,12 +22,24 @@ def f(x):
     b = 6
     return Pinf*Vinf*Gammazero*(1-((2*x/b)**2))**(1/2)
 
-f3y = f(-1.5) - 8010
-f4y = f(-1.5)
-f5y = f(0) - 8010
-f6y = f(0)
-f7y = f(1.5) - 8010
-f8y = f(1.5)
+xinterval = 1.5
+t3 = f(-1.5)
+t4 = f(xinterval)
+t5 = f(0)
+t6 = f(0)
+t7 = f(xinterval)
+t8 = f(xinterval)
+
+total_lift = 26655
+
+f5yy = total_lift / ((t3/t5) + (t4/t5) + (t6/t5) + (t7/t5) +
+                    (t8/t5) + 1)
+f5y = f5yy - 4023
+f3y = ((t3 / t5) * f5yy) - 4023
+f4y = (t4 / t5) * f5yy
+f6y = (t6 / t5) * f5yy
+f7y = ((t7 / t5) * f5yy) - 4023
+f8y = (t8 / t5) * f5yy
 f9y = 0
 f10y = 0
 f3x = 0
@@ -46,7 +58,6 @@ m7 = 0
 m8 = 0
 m9 = 0
 m10 = 0
-
 #Global displacement calcs
 F = np.array([f3x, f3y, m3, f4x, f4y, m4, f5x, f5y, m5, f6x, f6y,
               m6, f7x, f7y, m7, f8x, f8y, m8, f9x, f9y, m9, f10x,

@@ -19,6 +19,13 @@ stress_el11 = E*dcf.e_el11
 stress_el12 = E*dcf.e_el12
 stress_el13 = E*dcf.e_el13
 
+Local_stresses = np.array([stress_el2, stress_el3, stress_el4,
+                           stress_el5, stress_el6, stress_el7,
+                           stress_el8, stress_el9, stress_el10,
+                           stress_el11, stress_el12, stress_el13
+                           ]).reshape(12, 1)
+#print(Local_stresses)
+
 #Local element axial forces -----------------------------------------
 
 axial_force_el2 = A*stress_el2
@@ -48,5 +55,12 @@ f_local_el10 = np.matmul(lsmf.k_frame_local_10, dcf.local_disp_el10)
 f_local_el11 = np.matmul(lsmf.k_frame_local_11, dcf.local_disp_el11)
 f_local_el12 = np.matmul(lsmf.k_frame_local_12, dcf.local_disp_el12)
 f_local_el13 = np.matmul(lsmf.k_frame_local_13, dcf.local_disp_el13)
+
+local_forces = np.array([f_local_el2, f_local_el3, f_local_el4,
+                         f_local_el5, f_local_el6, f_local_el7,
+                         f_local_el8, f_local_el9, f_local_el10,
+                         f_local_el11, f_local_el12, f_local_el3])
+
+print(local_forces)
 
 a = 1
